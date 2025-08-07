@@ -1,0 +1,11 @@
+term=alacritty
+location=top
+yoffset=180
+width=35%
+
+prompt=*ribbit*
+show=drun
+insensitive=true
+allow_images=true
+hide_scroll=true
+no_actions=true

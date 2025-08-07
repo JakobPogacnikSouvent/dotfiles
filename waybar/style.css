@@ -1,0 +1,143 @@
+@import "everforest_dark_hard.css";
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0);
+    /* background-color: @bg1; */
+
+    /* border-bottom: 3 solid rgba(100, 114, 125, 0.5); */
+    color: #000000;
+    /* transition-property: background-color; */
+    /* transition-duration: .5s; */
+    /* border-radius: 0; */
+    font-family: "Iosevka Nerd Font";
+    font-size: 15px;
+}
+
+#custom-separator {
+    color: @gray1;
+}
+
+#cpu {
+    color: @blue;
+}
+
+#temperature.cpu {
+    padding-left: 0;
+    color: @blue;
+}
+
+#memory {
+    color: @aqua;
+}
+
+#custom-gpu-usage {
+    color: @orange;
+}
+
+#temperature.gpu {
+    padding-left: 0;
+    color: @orange;
+}
+
+#language {
+    color: @yellow;
+    padding-right: 10;
+}
+
+#pulseaudio {
+    color: @purple;
+    padding: 0 10;
+}
+
+#disk {
+    color: @fg;
+}
+
+#clock,
+#battery,
+#backlight,
+#network,
+#custom-media,
+#tray,
+#mode,
+#custom-date,
+#idle_inhibitor {
+    padding: 0 10;   
+    /* margin: 0 0;    */
+    color: #fff;
+}
+
+
+#workspaces {
+    padding: 0;
+    /* font-size: 15; */
+    font-family: BlexMonoNerdFontPropo;
+}
+
+
+#workspaces button {
+    border: none;
+    color: @fg;
+}
+  
+#workspaces button:hover {
+    background: rgba(255, 0, 0, 0);
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    outline: none;
+
+    color: @green;
+    /* box-shadow: none; */
+}
+  
+
+#workspaces button.visible {
+    color: @green;
+}
+
+#workspaces button.empty {
+    font-size: 12;
+}
+
+#workspaces button.urgent {
+	color: @purple;
+}
+
+#workspaces button.empty:hover {
+}
+
+#workspaces button.empty.active {
+}
+
+
+.modules-right {
+    /* background-color: #8E7CA6; */
+    background-color: @bg0;
+    border: 2px solid @purple;
+    
+    border-radius: 5;
+    margin-right: 5;
+    margin-top: 5;
+}
+
+.modules-left {
+    /* background-color: #74A629; */
+    background-color: @bg0;
+    border: 2px solid @green;
+        
+    border-radius: 5px;
+    margin-left: 5;
+    margin-top: 5;
+}
+
+
+.modules-center {
+    /* background-color: #1D733B; */
+    background-color: @bg0;
+    border: 2px solid @aqua;
+    
+    margin-top: 5;
+    border-radius: 5;
+    border-radius: 5;
+}
