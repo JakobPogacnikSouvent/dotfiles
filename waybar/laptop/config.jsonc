@@ -1,0 +1,165 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "bottom", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "hyprland/workspaces",
+        "sway/mode",
+        "sway/scratchpad",
+        "custom/media"
+    ],
+	"modules-center": [
+        "cava",
+        "clock#time",
+        "clock#date",
+        "cava"
+	],
+    "modules-right": [
+        "pulseaudio",
+        "custom/separator",
+        
+        "cpu",
+        "temperature#cpu",
+        "custom/separator",
+        
+        "custom/gpu-usage",
+        "temperature#gpu",
+        "custom/separator",
+        
+        "memory",
+        "custom/separator",
+        "disk",
+        "custom/separator",
+        "hyprland/language"
+    ],
+    "custom/submap": {
+        "exec": "cat /tmp/hypr_current_submap 2>/dev/null || echo reset",
+        "interval": 1
+    },
+    "custom/separator": {
+        "format": "|",
+        "interval": 0
+    },
+    "hyprland/workspaces": {
+        "show-special": false,
+        "format": "{icon}",
+          "format-icons": {
+            "default": "◉",
+            "empty": "○",
+            "special": "special",
+            "persistent": "◉",
+            "visible": "●"
+        },
+        "persistent-workspaces": {
+            "eDP-1": [1,2,3,4,5,6,7,8,9,10]
+        }
+    },
+    "hyprland/language": {
+        "format": "  {short}",
+		"min-length": 5
+        }, 
+    "clock#time": {
+        "format": "{:%H:%M:%S}",
+        "tooltip": false,
+        "min-length": 20,
+        "interval": 1
+    },
+    "clock#date": {
+        "format": "{:%a %d-%m-%Y}",
+        "tooltip": false,
+        "min-length": 20
+    },
+	"cpu": {
+		"interval": 5,
+		"tooltip": false,
+        "format": "\uf4bc  {icon}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+		"format-alt": "\uf4bc  {usage}%",
+		"states": {
+            "warning": 70,
+			"critical": 90
+		}
+	},
+	"memory": {
+        "interval": 1,
+        "format": " {icon}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "format-alt": "  {}%",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		},
+		"tooltip": false
+	},
+    "temperature#cpu": {
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        // "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C ",
+        "format": "{temperatureC}°C"
+    },
+    "temperature#gpu": {
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        // "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C ",
+        "format": "{temperatureC}°C"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/gpu-usage": {
+        "format": "\udb83\udfb2  {icon}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "format-alt": "\udb83\udfb2 {}",
+
+        "exec": "gpu-usage-waybar --text-no-memory --interval 10000",
+        "return-type": "json",
+        "tooltip": false,
+    },
+    "cava": {
+        "cava_config": "$HOME/.config/cava/cava.conf",
+        "framerate": 30,
+        "autosens": 1,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pipewire",
+        "source": "auto",
+        "stereo": true,
+        "bar_delimiter": 0,
+        "noise_reduction": 0.77,
+        "input_delay": 2,
+            "hide_on_silence": false,
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+            "on-click-right": "mode"
+        }
+    },
+    "disk": {
+        "interval": 30,
+        "format": "\udb80\udeca {free}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+
+    }
+}

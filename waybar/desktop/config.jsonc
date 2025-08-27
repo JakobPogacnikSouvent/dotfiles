@@ -48,7 +48,7 @@
         "show-special": false,
         "format": "{icon}",
           "format-icons": {
-            "default": "○",
+            "default": "◉",
             "empty": "○",
             "special": "special",
             "persistent": "◉",
