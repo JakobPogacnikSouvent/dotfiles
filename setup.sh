@@ -14,6 +14,10 @@ sync_folder "nvim"
 sync_folder "wofi"
 sync_folder "neofetch"
 
+mkdir -p "$HOME/.config/wallpapers"
+rsync -a wallpapers/wallhaven-exl22k.jpg "$HOME/.config/wallpapers"
+
+
 mkdir -p "$HOME/.config/hypr"
 mkdir -p "$HOME/.config/waybar"
 
