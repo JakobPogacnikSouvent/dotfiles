@@ -32,7 +32,14 @@
         
         "memory",
         "custom/separator",
+
         "disk",
+        "custom/separator",
+
+        "battery",
+        "custom/separator",
+
+        "network",
         "custom/separator",
         "hyprland/language"
     ],
@@ -160,6 +167,29 @@
         "interval": 30,
         "format": "\udb80\udeca {free}",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-
+    },
+        "battery": {
+        "bat": "BAT1",
+        "interval": 60,
+        "states": {
+        "warning": 30,
+        "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
+    },
+    "network": {
+        "format": "{icon} ",
+        "format-alt": "{signalStrength}%",
+        "format-icons": {
+            "wifi":  ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+        },
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "interval": 5
     }
 }

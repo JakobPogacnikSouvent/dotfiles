@@ -53,10 +53,18 @@ window#waybar {
     color: @fg;
 }
 
+#battery {
+    color: @blue;
+    padding-right: 10;
+}
+
+#network {
+    color: @aqua;
+    padding-right: 10;
+}
+
 #clock,
-#battery,
 #backlight,
-#network,
 #custom-media,
 #tray,
 #mode,
