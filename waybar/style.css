@@ -10,7 +10,7 @@ window#waybar {
     /* Border gradient trick */
     border: 2px solid transparent;
     border-radius: 9px;
-    background-image: linear-gradient(@bg0, @bg0), linear-gradient(to right, @green, @aqua, rgba(214, 153, 182, 0.7));
+    background-image: linear-gradient(@bg0, @bg0), linear-gradient(to right, @green, @aqua, @purple);
     background-clip: content-box, border-box;
     background-origin: border-box;
 
