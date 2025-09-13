@@ -96,7 +96,7 @@
 	},
 	"memory": {
         "interval": 1,
-        "format": " {icon}",
+        "format": "\uefc5  {icon}",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
         "format-alt": "  {}%",
 		"states": {
@@ -121,19 +121,17 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format": "{icon}  {volume}%",
+        "format-muted": "  {volume}%",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
+            // "hands-free": "",
+            // "headset": "",
+            // "phone": "",
+            // "portable": "",
+            // "car": "",
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
@@ -143,7 +141,7 @@
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
         "format-alt": "\udb83\udfb2 {}",
 
-        "exec": "gpu-usage-waybar --text-no-memory --interval 10000",
+        "exec": "$HOME/.cargo/bin/gpu-usage-waybar --text-no-memory --interval 10000",
         "return-type": "json",
         "tooltip": false,
     },
@@ -171,19 +169,19 @@
         "format": "\udb80\udeca {free}",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
     },
-        "battery": {
+    "battery": {
         "bat": "BAT1",
         "interval": 60,
         "states": {
         "warning": 30,
         "critical": 15
         },
-        "format": "{capacity}% {icon}",
+        "format": "{icon}  {capacity}%",
         "format-icons": ["", "", "", "", ""],
         "max-length": 25
     },
     "network": {
-        "format": "{icon} ",
+        "format": "  {icon}",
         "format-alt": "{signalStrength}%",
         "format-icons": {
             "wifi":  ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]

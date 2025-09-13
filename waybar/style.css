@@ -34,7 +34,7 @@ window#waybar {
 }
 
 #custom-gpu-usage {
-    color: @orange;
+    color: @aqua;
 }
 
 #temperature.gpu {
@@ -49,7 +49,6 @@ window#waybar {
 
 #pulseaudio {
     color: @green;
-    padding: 0 10;
 }
 
 #disk {
@@ -58,12 +57,10 @@ window#waybar {
 
 #battery {
     color: @purple;
-    padding-right: 10;
 }
 
 #network {
     color: @purple;
-    padding-right: 10;
 }
 
 #clock,
