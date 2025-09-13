@@ -1,10 +1,11 @@
+@import url("/home/jakob/.config/waybar/everforest_dark_hard.css");
+
 window {
 	font-size: 16px;
-	background-color: rgba(24, 89, 59, 0);
-	color: #fff;
-	font-family: BlexMonoNerdFontPropo;
+	color: @fg;
+    font-family: "Iosevka Nerd Font";
 
-	border-radius: 5px;
+    border-radius: 9px;
 }
 
 /* Inner Box */
@@ -18,8 +19,13 @@ window {
 /* Outer Box */
 #outer-box {
 	padding: 10px;
-	border-radius: 5px;
-	background-color: rgba(33, 64, 64, 0.95);
+
+	border: 2px solid transparent;
+    border-radius: 9px;
+    background-image: linear-gradient(@bg0, @bg0), linear-gradient(to right, @green, @aqua, @purple);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+
 }
 
 #entry {
@@ -30,24 +36,40 @@ window {
 }
 
 #entry:selected {
-	background-color: #18593B;
+    background-image: linear-gradient(to right, @green, @aqua, @purple);
 }
 
 #entry:focus {
-	background-color: #1d733b;
+    background-image: linear-gradient(to right, @green, @aqua, @purple);
 }
 
 #input {
+	font-family: BlexMonoNerdFontPropo;
 	font-style: italic;
-	background-color: rgba(33, 64, 64, 0.9);
-	color: #fff;
+	
+	border: 2px solid transparent;
+    border-radius: 9px;
+    background-image: linear-gradient(@bg_dim, @bg_dim), linear-gradient(to right, @green, @aqua, @purple);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
 }
 
 #input:focus {
+	font-family: "Iosevka Nerd Font";
 	font-style: normal;
-	border-color: #1d733b;
-	box-shadow: 0px 0px 1px 1px #1d733b;
+
+	box-shadow: 0;
 	transition-duration: 0;
+	
+	background-color: @bg0;
+	color: @fg;
+
+	border: 2px solid transparent;
+    border-radius: 9px;
+    background-image: linear-gradient(@bg0, @bg0), linear-gradient(to right, @green, @aqua, @purple);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+
 }
 
 #img {
