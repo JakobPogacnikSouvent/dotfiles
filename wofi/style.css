@@ -25,7 +25,6 @@ window {
     background-image: linear-gradient(@bg0, @bg0), linear-gradient(to right, @green, @aqua, @purple);
     background-clip: padding-box, border-box;
     background-origin: border-box;
-
 }
 
 #entry {
