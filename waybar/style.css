@@ -13,7 +13,6 @@ window#waybar {
     background-image: linear-gradient(@bg0, @bg0), linear-gradient(to right, @green, @aqua, @purple);
     background-clip: content-box, border-box;
     background-origin: border-box;
-
 }
 
 #custom-separator {
