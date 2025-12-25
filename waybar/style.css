@@ -77,8 +77,8 @@ window#waybar {
 
 #workspaces {
     padding: 0;
+    font-family: "DejaVu Sans";
     /* font-size: 15; */
-    font-family: BlexMonoNerdFontPropo;
 }
 
 

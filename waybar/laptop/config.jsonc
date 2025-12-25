@@ -89,7 +89,7 @@
         "interval": 1,
         "format": "\uefc5  {icon}",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-        "format-alt": "  {}%",
+        "format-alt": "\uefc5  {}%",
 		"states": {
 			"warning": 70,
 			"critical": 90
@@ -130,7 +130,7 @@
     "custom/gpu-usage": {
         "format": "\udb83\udfb2  {icon}",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-        "format-alt": "\udb83\udfb2 {}",
+        "format-alt": "\udb83\udfb2  {}",
 
         "exec": "$HOME/.cargo/bin/gpu-usage-waybar --text-no-memory --interval 10000",
         "return-type": "json",
