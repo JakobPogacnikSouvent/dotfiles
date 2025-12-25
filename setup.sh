@@ -1,6 +1,12 @@
 #!/bin/bash
 
-read -p "Enter device type ((1)desktop / (2)laptop): " device
+# Take device from first argument
+device="$1"
+
+# If not provided, ask interactively
+if [[ -z "$device" ]]; then
+    read -p "Enter device type ((1)desktop / (2)laptop): " device
+fi
 
 case "$device" in
     1 | desktop) device="desktop" ;;
