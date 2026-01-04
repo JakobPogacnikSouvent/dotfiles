@@ -1,0 +1,100 @@
+[gd_resource type="EditorSettings" load_steps=2 format=3]
+
+[sub_resource type="InputEventKey" id="InputEventKey_lfnfp"]
+keycode = 4194326
+
+[resource]
+interface/editor/code_font = "/usr/share/fonts/TTF/IosevkaNerdFont-Regular.ttf"
+interface/theme/preset = "Custom"
+interface/theme/base_color = Color(0.18039216, 0.21960784, 0.23529412, 1)
+interface/theme/accent_color = Color(0.654902, 0.7529412, 0.5019608, 1)
+interface/theme/contrast = 0.1
+text_editor/theme/color_theme = "Custom"
+text_editor/theme/highlighting/symbol_color = Color(0.9019608, 0.49411765, 0.5019608, 1)
+text_editor/theme/highlighting/keyword_color = Color(0.9019608, 0.49411765, 0.5019608, 1)
+text_editor/theme/highlighting/control_flow_keyword_color = Color(0.9019608, 0.49411765, 0.5019608, 1)
+text_editor/theme/highlighting/base_type_color = Color(0.49803922, 0.73333335, 0.7019608, 1)
+text_editor/theme/highlighting/engine_type_color = Color(0.49803922, 0.73333335, 0.7019608, 1)
+text_editor/theme/highlighting/user_type_color = Color(0.49803922, 0.73333335, 0.7019608, 1)
+text_editor/theme/highlighting/comment_color = Color(0.52156866, 0.57254905, 0.5372549, 1)
+text_editor/theme/highlighting/doc_comment_color = Color(0.6, 0.7, 0.8, 0.8)
+text_editor/theme/highlighting/string_color = Color(0.85882354, 0.7372549, 0.49803922, 1)
+text_editor/theme/highlighting/background_color = Color(0.15294118, 0.18039216, 0.2, 1)
+text_editor/theme/highlighting/completion_background_color = Color(0.18039216, 0.21960784, 0.23529412, 1)
+text_editor/theme/highlighting/completion_selected_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/completion_existing_color = Color(1, 1, 1, 0.14)
+text_editor/theme/highlighting/completion_font_color = Color(0.827451, 0.7764706, 0.6666667, 1)
+text_editor/theme/highlighting/text_color = Color(0.827451, 0.7764706, 0.6666667, 1)
+text_editor/theme/highlighting/line_number_color = Color(0.79509807, 0.80490196, 0.8088235, 0.5)
+text_editor/theme/highlighting/safe_line_number_color = Color(0.79509807, 0.96588236, 0.8088235, 0.75)
+text_editor/theme/highlighting/caret_color = Color(0.827451, 0.7764706, 0.6666667, 1)
+text_editor/theme/highlighting/selection_color = Color(0.654902, 0.7529412, 0.5019608, 0.4)
+text_editor/theme/highlighting/brace_mismatch_color = Color(1, 0.47, 0.42, 1)
+text_editor/theme/highlighting/current_line_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/line_length_guideline_color = Color(0.18039216, 0.21960784, 0.23529412, 1)
+text_editor/theme/highlighting/word_highlighted_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/number_color = Color(0.8392157, 0.6, 0.7137255, 1)
+text_editor/theme/highlighting/function_color = Color(0.654902, 0.7529412, 0.5019608, 1)
+text_editor/theme/highlighting/member_variable_color = Color(0.827451, 0.7764706, 0.6666667, 1)
+text_editor/theme/highlighting/mark_color = Color(1, 0.47, 0.42, 0.3)
+text_editor/theme/highlighting/warning_color = Color(1, 0.87, 0.4, 0.15)
+text_editor/theme/highlighting/bookmark_color = Color(0.49803922, 0.73333335, 0.7019608, 1)
+text_editor/theme/highlighting/breakpoint_color = Color(0.9019608, 0.5568628, 0.5019608, 1)
+text_editor/theme/highlighting/executing_line_color = Color(0.85882354, 0.7372549, 0.49803922, 1)
+text_editor/theme/highlighting/code_folding_color = Color(1, 1, 1, 0.27)
+text_editor/theme/highlighting/search_result_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/gdscript/function_definition_color = Color(0.654902, 0.7529412, 0.5019608, 1)
+text_editor/theme/highlighting/gdscript/global_function_color = Color(0.654902, 0.7529412, 0.5019608, 1)
+text_editor/theme/highlighting/gdscript/node_reference_color = Color(0.5137255, 0.7529412, 0.57254905, 1)
+text_editor/theme/highlighting/gdscript/annotation_color = Color(0.9019608, 0.59607846, 0.45882353, 1)
+text_editor/theme/highlighting/comment_markers/critical_color = Color(0.9019608, 0.49411765, 0.5019608, 1)
+text_editor/theme/highlighting/comment_markers/warning_color = Color(0.827451, 0.7764706, 0.6666667, 1)
+text_editor/theme/highlighting/comment_markers/notice_color = Color(0.654902, 0.7529412, 0.5019608, 1)
+text_editor/appearance/guidelines/show_line_length_guidelines = false
+text_editor/appearance/whitespace/draw_tabs = false
+text_editor/behavior/files/trim_trailing_whitespace_on_save = true
+editors/3d_gizmos/gizmo_settings/bone_axis_length = 0.1
+editors/animation/default_animation_step = 0.033333335
+export/android/debug_keystore = "/home/jakob/.local/share/godot/keystores/debug.keystore"
+export/android/debug_keystore_pass = "android"
+export/android/java_sdk_path = ""
+export/android/android_sdk_path = "/home/jakob/Android/Sdk"
+export/macos/rcodesign = ""
+export/web/http_port = 8060
+export/web/tls_key = ""
+export/web/tls_certificate = ""
+export/windows/osslsigncode = ""
+_editor_settings_advanced_mode = true
+_project_settings_advanced_mode = false
+_export_template_download_directory = ""
+_default_feature_profile = ""
+_script_setup_templates_dictionary = {
+"": "0ObjectEmpty",
+"Area2D": "0NodeDefault",
+"Button": "0NodeDefault",
+"Control": "0NodeDefault",
+"Node": "0NodeDefault",
+"Node2D": "0NodeDefault",
+"R": "0ObjectEmpty",
+"Re": "0ObjectEmpty",
+"Reo": "0ObjectEmpty",
+"Reou": "0ObjectEmpty",
+"Reous": "0ObjectEmpty",
+"Reousr": "0ObjectEmpty",
+"Res": "0ObjectEmpty",
+"Reso": "0ObjectEmpty",
+"Resou": "0ObjectEmpty",
+"Resour": "0ObjectEmpty",
+"Resourc": "0ObjectEmpty",
+"Resource": "0ObjectEmpty",
+"TextureButton": "0NodeDefault"
+}
+_script_setup_use_script_templates = true
+_use_favorites_root_selection = false
+shortcuts = [{
+"name": "spatial_editor/viewport_zoom_modifier_1",
+"shortcuts": [SubResource("InputEventKey_lfnfp")]
+}, {
+"name": "spatial_editor/viewport_zoom_modifier_2",
+"shortcuts": []
+}]
