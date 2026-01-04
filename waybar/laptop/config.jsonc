@@ -10,7 +10,9 @@
     "margin-right": 5,
     "margin-top": 5,
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces#1",
+        "custom/separator",
+        "hyprland/workspaces#2"
     ],
 	"modules-center": [
         "clock#time",
@@ -45,7 +47,8 @@
         "format": "|",
         "interval": 0
     },
-    "hyprland/workspaces": {
+    "hyprland/workspaces#1": {
+        "persistent-only": true,
         "show-special": false,
         "format": "{icon}",
           "format-icons": {
@@ -56,7 +59,22 @@
             "visible": "●"
         },
         "persistent-workspaces": {
-            "eDP-1": [1,2,3,4,5,6,7,8,9,10]
+            "eDP-1": [1,2,3,4,5]
+        }
+    },
+    "hyprland/workspaces#2": {
+        "persistent-only": true,
+        "show-special": false,
+        "format": "{icon}",
+          "format-icons": {
+            "default": "◉",
+            "empty": "○",
+            "special": "special",
+            "persistent": "◉",
+            "visible": "●"
+        },
+        "persistent-workspaces": {
+            "eDP-1": [6,7,8,9,10]
         }
     },
     "hyprland/language": {
@@ -150,7 +168,12 @@
         },
         "format": "{icon}  {capacity}%",
         "format-icons": ["", "", "", "", ""],
-        "max-length": 25
+        "max-length": 25,
+        "events": {
+            "on-discharging-warning": "notify-send -u normal 'Low Battery'",
+            "on-discharging-critical": "notify-send -u critical 'Very Low Battery'",
+            "on-charging-100": "notify-send -u normal 'Battery Full!'"
+        }
     },
     "network": {
         "format": "  {icon}",
