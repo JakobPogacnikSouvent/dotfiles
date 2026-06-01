@@ -30,6 +30,7 @@ sync_folder "alacritty"
 sync_folder "nvim"
 sync_folder "wofi"
 sync_folder "neofetch"
+sync_folder "mako"
 
 # wallpaper
 mkdir -p "$HOME/.config/wallpapers"
