@@ -15,7 +15,8 @@ SPECIAL_WS_NAME=$(echo "$MON_INFO" | jq -r '.specialWorkspace.name')
 if [[ "$SPECIAL_WS_NAME" != "" ]]; then
     # Strip "special:" prefix
     SPECIAL_WS_NAME="${SPECIAL_WS_NAME#special:}"
-    hyprctl dispatch togglespecialworkspace "$SPECIAL_WS_NAME"
+    # hyprctl dispatch togglespecialworkspace "$SPECIAL_WS_NAME"
+    hyprctl dispatch "hl.dsp.workspace.toggle_special('$SPECIAL_WS_NAME')"
     exit 0
 fi
 
@@ -37,4 +38,5 @@ else
   fi
 fi
 
-hyprctl dispatch workspace "$NEW_WS"
+# hyprctl dispatch workspace "$NEW_WS"
+hyprctl dispatch "hl.dsp.focus({ workspace = $NEW_WS })"

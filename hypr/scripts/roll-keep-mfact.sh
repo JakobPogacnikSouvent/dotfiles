@@ -16,15 +16,18 @@ fi
 STATE_FILE="/tmp/hypr_mfact_$WS"
 
 # 2. Perform the movement
-hyprctl dispatch layoutmsg "$COMMAND"
+# hyprctl dispatch layoutmsg "$COMMAND"
+hyprctl dispatch "hl.dsp.layout('$COMMAND')"
 
 # 3. Restore the mfact for this specific workspace
 if [ -f "$STATE_FILE" ]; then
     SAVED_MFACT=$(cat "$STATE_FILE")
-    hyprctl dispatch layoutmsg mfact exact "$SAVED_MFACT"
+    # hyprctl dispatch layoutmsg mfact exact "$SAVED_MFACT"
+    hyprctl dispatch "hl.dsp.layout('mfact exact $SAVED_MFACT')"
 else
     # Optional: Reset to default if no state file exists to prevent 
     # carry-over from a previous workspace's manual adjustment
     DEFAULT_MFACT=$(hyprctl getoption master:mfact -j | jq '.float')
-    hyprctl dispatch layoutmsg mfact exact "$DEFAULT_MFACT"
+    # hyprctl dispatch layoutmsg mfact exact "$DEFAULT_MFACT"
+    hyprctl dispatch "hl.dsp.layout('mfact exact $DEFAULT_MFACT')"
 fi

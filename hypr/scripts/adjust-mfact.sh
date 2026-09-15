@@ -33,6 +33,7 @@ if (( $(echo "$NEW < 0.05" | bc -l) )); then NEW=0.05; fi
 if (( $(echo "$NEW > 0.95" | bc -l) )); then NEW=0.95; fi
 
 # 5. Apply and Save
-hyprctl dispatch layoutmsg mfact exact "$NEW"
+# hyprctl dispatch layoutmsg mfact exact "$NEW"
+hyprctl dispatch "hl.dsp.layout('mfact exact $NEW')"
 echo "$NEW" > "$STATE_FILE"
 echo "$NEW"
