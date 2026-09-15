@@ -26,6 +26,10 @@ require("programs")
 -- exec-once = systemctl --user start xdg-desktop-portal-wlr.service
 -- exec-once = systemctl --user restart xdg-desktop-portal.service
 
+hl.on("hyprland.start", function () 
+  hl.dispatch(hl.dsp.focus({ workspace = "1" }))
+end)
+
 --############################
 --## ENVIRONMENT VARIABLES ###
 --############################
