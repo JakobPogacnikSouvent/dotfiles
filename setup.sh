@@ -48,13 +48,13 @@ rsync -a --delete --exclude 'desktop/' --exclude 'laptop/' "$HOME/dotfiles/wayba
 
 # hypr
 mkdir -p "$HOME/.config/hypr/scripts"
-mkdir -p "$HOME/.config/waybar"
 
-rsync -a "$HOME/dotfiles/hypr/$device/monitors.conf" "$HOME/.config/hypr/"
-rsync -a "$HOME/dotfiles/hypr/$device/input.conf" "$HOME/.config/hypr/"
+rsync -a "$HOME/dotfiles/hypr/$device/monitors.lua" "$HOME/.config/hypr/"
+rsync -a "$HOME/dotfiles/hypr/$device/input.lua" "$HOME/.config/hypr/"
 rsync -a "$HOME/dotfiles/hypr/$device/scripts/cycle-workspace.sh" "$HOME/.config/hypr/scripts/"
 
 # waybar
+mkdir -p "$HOME/.config/waybar"
 rsync -a "$HOME/dotfiles/waybar/$device/config.jsonc" "$HOME/.config/waybar/"
 
 hyprctl reload
