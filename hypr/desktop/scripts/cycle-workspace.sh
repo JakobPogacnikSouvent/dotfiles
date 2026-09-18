@@ -35,14 +35,14 @@ fi
 
 # Determine new workspace
 if [[ "$DIRECTION" == "next" ]]; then
-  if (( ACTIVE_WS < MAX )); then
-    NEW_WS=$((ACTIVE_WS + 1))
+  if (( ACTIVE_WS_ID < MAX )); then
+    NEW_WS=$((ACTIVE_WS_ID + 1))
   else
     NEW_WS=$MIN
   fi
 else
-  if (( ACTIVE_WS > MIN )); then
-    NEW_WS=$((ACTIVE_WS - 1))
+  if (( ACTIVE_WS_ID > MIN )); then
+    NEW_WS=$((ACTIVE_WS_ID - 1))
   else
     NEW_WS=$MAX
   fi
